@@ -4,4 +4,6 @@
 *.fls
 *.gz
 *latexmk
+*.bbl
+*.blg
 signature.png
