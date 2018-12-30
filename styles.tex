@@ -49,3 +49,10 @@
 \newcommand{\poswithprd}[2]{
     \position{#1}\hfill\period{#2}
 }
+\newenvironment{miniItemize}{
+    \begin{minipage}[t]{\itemwidth}
+    \begin{itemize}
+}{
+    \end{itemize}
+    \end{minipage}\\
+}
