@@ -1,8 +1,25 @@
 \renewcommand{\familydefault}{\sfdefault}   % sf font
 
-\frenchspacing              % Better looking spacings after periods
 \pagestyle{empty}           % No page numbers/headers/footers
 \setlength\parindent{0pt}   % No indent
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Sections
+\usepackage{sectsty}
+
+\sectionfont{
+    \sectionrule{0pt}{0pt}{-4pt}{1.5pt}
+}
+
+\newcommand{\sectiontitle}[1]{
+    \textbf{\uppercase{#1}}
+}
+
+\newcommand{\NewPart}[1]{
+    \vspace{-1.5em}
+    \addsec{\sectiontitle{#1}}
+    \vspace{-0.75em}
+}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Spacing
@@ -10,19 +27,18 @@
 \geometry{left=1.5cm,right=1.5cm,top=1.5cm,bottom=1.5cm}
 % vertical
 \usepackage{enumitem}
-\setitemize[0]{noitemsep, nosep}
-\newcommand{\afterEntrySpace}{\vspace{0.5em}}
+\setlist{noitemsep, nosep, after=\vspace{0.4em}}
 % horizontal
-\newcommand{\courseworkwidth}{11.1cm}
-\newcommand{\miniwidth}{14.3cm}
-\newcommand{\skillwidth}{11cm}
+\newcommand{\courseworkwidth}{11.5cm}
+\newcommand{\itemwidth}{14.5cm}
+\newcommand{\skillwidth}{\courseworkwidth}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Entries
 \newcommand{\name}[1]{
-    \Huge\textbf{\uppercase{#1}} \normalsize \normalfont
+    {\Huge\textbf{\uppercase{#1}}}
 }
-\newcommand{\orgnization}[1]{\large\textbf{#1}}
+\newcommand{\orgnization}[1]{{\large\textbf{#1}}}
 \newcommand{\location}[1]{\textbf{#1}}
 \newcommand{\position}[1]{\emph{#1}}
 \newcommand{\period}[1]{#1}
@@ -32,24 +48,4 @@
 }
 \newcommand{\poswithprd}[2]{
     \position{#1}\hfill\period{#2}
-}
-
-\newcommand{\generalentry}[4]{
-    \orgwithloc{#1}{#2}\poswithprd{#3}{#4}
-}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Sections
-\usepackage{sectsty}
-
-\sectionfont{
-    \sectionrule{0pt}{0pt}{-5pt}{1.5pt}
-}
-
-\newcommand{\sectiontitle}[1]{
-    \textbf{\uppercase{#1}}
-}
-
-\newcommand{\NewPart}[1]{
-    \addsec{\sectiontitle{#1}}
 }
