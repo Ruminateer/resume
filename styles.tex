@@ -15,23 +15,23 @@
     \textbf{\uppercase{#1}}
 }
 
-\newcommand{\NewPart}[1]{
-    \vspace{-1.5em}
-    \addsec{\sectiontitle{#1}}
-    \vspace{-0.75em}
-}
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Spacing
-\usepackage{geometry}
-\geometry{left=1.5cm,right=1.5cm,top=1.5cm,bottom=1.5cm}
+\usepackage{calc}
+\usepackage[scale = 0.9]{geometry}
 % vertical
+\newcommand{\NewPart}[1]{
+    \vspace{-3.5055ex}
+    \addsec{\sectiontitle{#1}}
+    \vspace{-1.5ex}
+}
 \usepackage{enumitem}
-\setlist{noitemsep, nosep, after=\vspace{0.4em}}
+\setlist{noitemsep, nosep, after=\vspace{1.2ex}}
 % horizontal
-\newcommand{\courseworkwidth}{11.5cm}
-\newcommand{\itemwidth}{14.5cm}
-\newcommand{\skillwidth}{\courseworkwidth}
+\newcommand{\bltPrdWidth}{8.8em}
+\newcommand{\courseworkwidth}{\textwidth - \bltPrdWidth - 8em}
+\newcommand{\itemwidth}{\textwidth - \bltPrdWidth}
+\newcommand{\skillwidth}{\textwidth - \bltPrdWidth - 8.8em}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Entries
