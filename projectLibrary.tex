@@ -5,16 +5,20 @@
         \item
         Designed and implemented a heuristic algorithm and an exact algorithm for the travelling salesman problem using C++.
         \item
-        Applied branch and bound for the exact algorithm:
-        Use the output of the heuristic algorithm as the initial upper bound.
-        Search for the minimum tree that spans the unvisited points to estimate the cost of the current branch.
+        Implemented Prim's MST algorithm.
+        % Applied branch and bound for the exact algorithm:
+        % Use the output of the heuristic algorithm as the initial upper bound.
+        In the exact algorithm, used the algorithm to search for the MST that spans the unvisited points to estimate the cost of the current branch. Prune the current branch if the estimation exceeds the minimal cost so far.
     \end{miniItemize}
 }
 \newcommand{\SillyQL}{
     \poswithprd{Course Project: SillyQL}{Nov 2018}
     \begin{miniItemize}
         \item
-        Test
+        Implemented a relational database using C++, which supports operations on entries that meet user-specified conditions. 
+        % The conditions can be a range of values on any attribution.
+        \item
+        Let the database generate hash tables as index on demand to speed up searching.
     \end{miniItemize}
 }
 \newcommand{\LCTwoK}{
@@ -24,16 +28,16 @@
         Implemented an assembler and a linker for LC2K ISA using C.
         \item
         Implemented a simulator for LC2K ISA using C.
-        The simulator simulates a machine with a 5 stage pipeline and user-specified cache configuration.
+        The simulator simulates a machine with a 5-stage detect\&forward pipeline and user-specified cache configuration.
     \end{miniItemize}
 }
 
 % SJTU projects
-\newcommand{\HackxSJTU}{
-    \poswithprd{HackxSJTU}{June 2018}
+\newcommand{\HACKxSJTU}{
+    \poswithprd{HACKxSJTU}{June 2018}
     \begin{miniItemize}
         \item
-        Designed an AR navigation application, which could place pets at crossings to indicate  directions.
+        Designed an AR navigation application, which places pets at crossings to indicate  directions.
         \item
         Used Unity and ARCore to implement the application on Android devices. Used C\# to control the motion of the pets.
     \end{miniItemize}
@@ -43,25 +47,25 @@
     \begin{miniItemize}
         % TODO: organize the words better
         \item
-        Designed and implemented a robot to catch and transport various objects.
+        Worked in a team of 8 members. The team designed and implemented a robot to catch and transport various objects. 
         Won championship.
         \item 
-        Worked in a team of eight. Responsible for the design of the frame.
+        Designed the frame of the robot. 
+        Communicated with all the members to make sure that everyone's part fit in the frame.
     \end{miniItemize}
 }
 
 % JI freshman courses
 \newcommand{\ParkingLots}{
-    \poswithprd{Parking Lots System Design}{July 2017-Aug 2017}
+    \poswithprd{Course Project: Parking Lots System}{July 2017-Aug 2017}
     \begin{miniItemize}
         \item 
-        Designed and implemented a parking lot system to arrange the charge and parking positions using C++.
-        \item 
-        Used OpenGL to visualize the parking lot.
+        Led a group of 4 members. The group designed and implemented a parking lot system using C++, and visualized a parking lot using OpenGL.
+        \item Designed the interfaces of all the classes. Implemented all the base classes.
     \end{miniItemize}
 }
 \newcommand{\TowerDefence}{
-    \poswithprd{Tower Defense Game}{Sept 2016-Oct 2016}
+    \poswithprd{Course Project: Tower Defense Game}{Sept 2016-Oct 2016}
     \begin{miniItemize}
         \item   
         Designed a robotic car, which could run along the track, start and stop under conditions specified by the rules.
