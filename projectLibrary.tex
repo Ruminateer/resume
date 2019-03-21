@@ -1,3 +1,13 @@
+% 2019 Winter
+\newcommand{\ThreadLib}{
+    \poswithprd{Course Project: Thread Library}{Feb 2019}
+    \begin{miniItemize}
+        \item 
+        Led a group of 3 members. Implemented thread, mutex, and condition\_variable on multiprocessor systems using ucontext.h. Maintained queues of ucontext\_t to achieve FIFO scheduling. Swap context when the current thread is blocked, yield is called, or timer interrupt occurs.
+    \end{miniItemize}
+}
+
+
 % 2018 Fall
 \newcommand{\TSP}{
     \poswithprd{Course Project: Travelling salesman problem}{Dec 2018}
@@ -15,10 +25,9 @@
     \poswithprd{Course Project: SillyQL}{Nov 2018}
     \begin{miniItemize}
         \item
-        Implemented a relational database using C++, which supports operations on entries that meet user-specified conditions. 
-        % The conditions can be a range of values on any attribution.
+        Implemented a simple relational database using C++, which supports non-nested insert, delete, select, and join.
         \item
-        Let the database generate hash tables as indices on demand to speed up searching.
+        Supports multiple indices (hash based index or binary tree based) on each table. Defers work to improve performance.
     \end{miniItemize}
 }
 \newcommand{\LCTwoK}{
