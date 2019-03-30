@@ -20,6 +20,7 @@
 \usepackage{calc}
 \usepackage[scale = 0.9]{geometry}
 % vertical
+\renewcommand{\baselinestretch}{1.0}
 \newcommand{\NewPart}[1]{
     \vspace{-3.9ex}
     \addsec{\sectiontitle{#1}}
@@ -28,7 +29,7 @@
 \usepackage{enumitem}
 \setlist{noitemsep, nosep, after=\vspace{1.2ex}}
 % horizontal
-\newcommand{\bltPrdWidth}{8.8em}
+\newcommand{\bltPrdWidth}{7.5em}
 \newcommand{\courseworkwidth}{\textwidth - \bltPrdWidth - 8em}
 \newcommand{\itemwidth}{\textwidth - \bltPrdWidth}
 \newcommand{\skillwidth}{\textwidth - \bltPrdWidth - 8.1em}
@@ -47,7 +48,7 @@
     \orgnization{#1}\hfill\location{#2}\\
 }
 \newcommand{\poswithprd}[2]{
-    \position{#1}\hfill\period{#2}
+    \position{#1}\hfill\period{#2}\\
 }
 \newenvironment{miniItemize}{
     \begin{minipage}[t]{\itemwidth}

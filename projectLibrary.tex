@@ -1,18 +1,28 @@
 % 2019 Winter
+\newcommand{\Pager}{
+    \poswithprd{分页内存管理器}{2019.03}
+    \begin{miniItemize}
+        \item
+        领导2人小组. 基于仅支持read\_enable与write\_enable的模拟MMU实现分页内存管理器. 管理器通过页缺失追踪更新物理分页的信息.
+        \item
+        支持多进程切换与fork新建进程, 通过实现写入时复制以提高性能. 支持动态内存分页与文件分页, 实现时钟算法以管理物理内存.
+        \item
+        实现面向对象编程. 通过控制模块间耦合度, 提升代码可读性, 降低代码调试维护难度.
+    \end{miniItemize}
+}
+
 \newcommand{\ThreadLib}{
-    \poswithprd{Course Project: Thread Library}{Feb 2019}
+    \poswithprd{线程库}{2019.02}
     \begin{miniItemize}
         \item 
-        Led a group of 3 members. Implemented thread, mutex, and condition\_variable on multiprocessor systems using ucontext.h.
-        \item
-        Maintained queues of ucontext\_t to achieve FIFO scheduling. Swap context when the current thread is blocked, yield is called, or timer interrupt occurs.
+        领导3人小组. 基于ucontext在多核处理器上实现thread, mutex, 与 condition\_variable.
     \end{miniItemize}
 }
 
 
 % 2018 Fall
 \newcommand{\TSP}{
-    \poswithprd{Course Project: Travelling salesman problem}{Dec 2018}
+    \poswithprd{Course Project: Travelling salesman problem}{2018.12}
     \begin{miniItemize}
         \item
         Designed and implemented a heuristic algorithm and an exact algorithm for the travelling salesman problem using C++.
@@ -24,28 +34,27 @@
     \end{miniItemize}
 }
 \newcommand{\SillyQL}{
-    \poswithprd{Course Project: SillyQL}{Nov 2018}
+    \poswithprd{内存数据库}{2018.11}
     \begin{miniItemize}
         \item
-        Implemented a simple relational database using C++, which supports non-nested insert, delete, select, and join.
+        用C++实现一个基于内存的关系型数据库. 支持非嵌套的INSERT, DELETE, SELECT, 与JOIN.
         \item
-        Supports multiple indices (hash based index or binary tree based) on each table. Defers work to improve performance.
+        支持在任意列上建立哈希索引与树索引. 通过仅在使用索引前更新索引, 避免非必要计算以提高性能.
     \end{miniItemize}
 }
 \newcommand{\LCTwoK}{
-    \poswithprd{Course Project: LC2K ISA}{Sept 2018-Dec 2018}
+    \poswithprd{LC2K指令集}{2018.09-2018.12}
     \begin{miniItemize}
         \item
-        Implemented an assembler and a linker for LC2K ISA using C.
+        用C语言实现LC2K指令集的汇编器与链接器.
         \item
-        Implemented a simulator for LC2K ISA using C.
-        The simulator simulates a machine with a 5-stage detect\&forward pipeline and user-specified cache configuration.
+        用C语言实现LC2K指令集的5级流水线模拟器. 支持简单的分支预测与自定义缓存.
     \end{miniItemize}
 }
 
 % SJTU projects
 \newcommand{\HACKxSJTU}{
-    \poswithprd{HACKxSJTU}{June 2018}
+    \poswithprd{HACKxSJTU}{2018.6}
     \begin{miniItemize}
         \item
         Designed an AR navigation application, which places pets at crossings to indicate  directions.
@@ -54,7 +63,7 @@
     \end{miniItemize}
 }
 \newcommand{\RoboticsCompetition}{
-    \poswithprd{SJTU Freshmen Robotics Competition}{Mar 2017-Apr 2017}
+    \poswithprd{SJTU Freshmen Robotics Competition}{2017.03-2017.04}
     \begin{miniItemize}
         % TODO: organize the words better
         \item
