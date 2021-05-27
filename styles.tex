@@ -9,7 +9,7 @@
 
 % vertical
 \newcommand{\NewPart}[1]{
-    \vspace{-4.5ex}
+    \vspace{-3ex}
     \section*{\sectiontitle{#1}}
     \vspace{-1.5ex}
 }
@@ -38,15 +38,18 @@
 \newcommand{\period}[1]{#1}
 
 \newcommand{\orgwithloc}[2]{
-    \orgnization{#1}\hfill\location{#2}\\
+    \orgnization{#1}\hfill\location{#2}
+
 }
 \newcommand{\poswithprd}[2]{
-    \position{#1}\hfill\period{#2}\\
+    \position{#1}\hfill\period{#2}
+
 }
 \newenvironment{miniItemize}{
     \begin{minipage}[t]{\itemwidth}
     \begin{itemize}
 }{
     \end{itemize}
-    \end{minipage}\\
+    \end{minipage}
+
 }
