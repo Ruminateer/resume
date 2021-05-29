@@ -1,11 +1,9 @@
-name: Build & Release
+name: Build
 
 on:
   push:
     branches:
       - master
-    tags:
-      - 'v*.*.*'
   pull_request:
     branches:
       - master
@@ -26,10 +24,3 @@ jobs:
         with:
           name: Resume
           path: Resume.pdf
-      - name: Release
-        uses: softprops/action-gh-release@v1
-        with:
-          files: Resume.pdf
-          body_path: CHANGELOG.txt
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
