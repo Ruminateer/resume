@@ -1,6 +1,13 @@
 name: Build
 
-on: push
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+  workflow_dispatch:
 
 jobs:
   build:
@@ -12,7 +19,8 @@ jobs:
         uses: xu-cheng/latex-action@v2
         with:
           root_file: Resume.tex
-      - uses: actions/upload-artifact@v2
+      - name: Upload
+        uses: actions/upload-artifact@v2
         with:
-          name: PDF
+          name: Resume
           path: Resume.pdf
