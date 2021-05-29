@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - master
+    tags:
+      - 'v*.*.*'
   pull_request:
     branches:
       - master
@@ -26,7 +28,6 @@ jobs:
           path: Resume.pdf
       - name: Release
         uses: softprops/action-gh-release@v1
-        if: startsWith(github.ref, 'refs/tags/v')
         with:
           files: Resume.pdf
           body_path: CHANGELOG.txt
