@@ -23,6 +23,6 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           files: Resume.pdf
-          body_path: CHANGELOG.md
+          body_path: ${{ github.workspace }}/CHANGELOG.md
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
