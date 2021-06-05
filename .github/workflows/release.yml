@@ -15,9 +15,14 @@ jobs:
         uses: xu-cheng/latex-action@v2
         with:
           root_file: Resume.tex
+      - name: Changelog
+        uses: charmixer/auto-changelog-action@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
           files: Resume.pdf
+          body_path: ${{ github.workspace }}/CHANGELOG.md
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
