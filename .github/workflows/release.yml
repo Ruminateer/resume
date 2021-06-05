@@ -24,6 +24,5 @@ jobs:
         with:
           files: Resume.pdf
           body_path: CHANGELOG.md
-          body: Changelog unavailable.
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
