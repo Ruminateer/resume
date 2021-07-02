@@ -4,16 +4,16 @@
 Developed various components for running Paddle workflows on Kubernetes.
 
 \begin{miniItemize}
-    \item Add Paddle predictor to \href{https://github.com/kubeflow/kfserving}{KFServing}, allowing users to serve Paddle models on Kubernetes.
+    \item Added Paddle predictor to \href{https://github.com/kubeflow/kfserving}{KFServing}, allowing users to serve Paddle models on Kubernetes.
     \begin{itemize}[after=\vspace{0ex}]
-        \item Used KFServing Python SDK and Paddle inference to develop Paddle Server, an HTTP server that serves Paddle models. Add GitHub workflows for building and publishing Paddle Server docker image.
-        \item Add Paddle predictor support to KFServing inferenceservice CRD and controller. Provided with only the location of Paddle models in the object spec, the controller can setup a directly usable autoscaled inference service using the Paddle Server image.
+        \item Used KFServing Python SDK and Paddle inference to develop Paddle Server, an HTTP server that serves Paddle models. Added GitHub workflows for building and publishing Paddle Server docker image.
+        \item Added Paddle predictor support to KFServing inferenceservice CRD and controller. Provided with only the location of Paddle models in the object spec, the controller can setup a directly usable autoscaled inference service using the Paddle Server image.
         % e2e related
     \end{itemize}
     \item Developed \href{https://github.com/PaddleFlow/paddle-operator}{Paddle Operator}, allowing users to train Paddle models on Kubernetes.
     \begin{itemize}[after=\vspace{0ex}]
-        \item Upgrade the legacy operator. Migrate the project from Go Dep to Go Modules. Upgrade the dependencies so that the operator works on Kubernetes 1.20. Write design docs.
-        \item Create helm charts to simplify operator deployment. Write controller tests.
+        \item Upgraded the legacy operator. Migrated the project from Go Dep to Go Modules. Upgraded the dependencies so that the operator works on Kubernetes 1.20. Wrote design docs.
+        \item Created helm charts to simplify operator deployment. Wrote controller tests.
         % QA, BMLC
     \end{itemize}
 \end{miniItemize}
