@@ -7,7 +7,7 @@ Developed various components for running \href{https://github.com/PaddlePaddle}{
     \item Added Paddle predictor to \href{https://github.com/kubeflow/kfserving}{KFServing}, allowing users to serve Paddle models on Kubernetes.
     \begin{itemize}[after=\vspace{0ex}]
         \item Used KFServing Python SDK and Paddle inference to develop Paddle Server, an HTTP server that serves Paddle models. Added GitHub workflows for building and publishing Paddle Server docker image.
-        \item Added Paddle predictor support to KFServing inferenceservice CRD and controller. Provided with only the location of Paddle models in the object spec, the controller can setup a directly usable autoscaled inference service using the Paddle Server image.
+        \item Added Paddle predictor support to KFServing inferenceservice CRD and controller. Provided with only the location of Paddle models in the object spec, the controller can set up a directly usable autoscaled inference service using the Paddle Server image.
         % \item Set up Argo based e2e tests for the whole process.
     \end{itemize}
     \item Developed \href{https://github.com/PaddleFlow/paddle-operator}{Paddle Operator}, allowing users to train Paddle models on Kubernetes.
