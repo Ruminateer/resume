@@ -1,11 +1,16 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesClass{resume}
+
+\LoadClass[11pt]{article}
+
 \renewcommand{\familydefault}{\sfdefault}   % sf font
-\usepackage{fontawesome}
+\RequirePackage{fontawesome}
 \pagestyle{empty}           % No page numbers/headers/footers
 
-\usepackage[hidelinks]{hyperref}
+\RequirePackage[hidelinks]{hyperref}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Spacing
-\usepackage[scale = 0.9]{geometry}
+\RequirePackage[scale = 0.9]{geometry}
 
 % vertical
 \newcommand{\NewPart}[1]{
@@ -13,11 +18,11 @@
     \section*{\sectiontitle{#1}}
     \vspace{-1.5ex}
 }
-\usepackage{enumitem}
+\RequirePackage{enumitem}
 \setlist{noitemsep, nosep, after=\vspace{1.3ex}}
 
 % horizontal
-\usepackage{calc}
+\RequirePackage{calc}
 \setlength\parindent{0pt}
 \newcommand{\bltPrdWidth}{8.8em}
 \newcommand{\itemwidth}{\textwidth - \bltPrdWidth}
@@ -25,7 +30,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Sections
-\usepackage{sectsty}
+\RequirePackage{sectsty}
 \sectionfont{\sectionrule{0pt}{0pt}{-4pt}{1.5pt}}
 \newcommand{\sectiontitle}[1]{\textbf{\uppercase{#1}}}
 
