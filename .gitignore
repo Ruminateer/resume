@@ -1,7 +1,5 @@
-Resume.pdf
-Resume.out
-简历.out
-简历.pdf
+*.pdf
+*.out
 *.aux
 *.log
 *.fls
