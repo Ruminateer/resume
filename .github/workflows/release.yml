@@ -14,7 +14,9 @@ jobs:
       - name: Compile
         uses: xu-cheng/latex-action@v2
         with:
-          root_file: Resume*.tex
+          root_file: |
+            Resume_web.tex
+            Resume_sys.tex
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
