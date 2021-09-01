@@ -14,12 +14,10 @@ jobs:
       - name: Compile
         uses: xu-cheng/latex-action@v2
         with:
-          root_file: |
-            Resume_web.tex
-            Resume_sys.tex
+          root_file: Resume.tex
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
-          files: Resume*.pdf
+          files: Resume.pdf
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
