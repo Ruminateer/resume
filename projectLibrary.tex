@@ -13,13 +13,12 @@
 % 2019 Winter
 \newcommand{\Pager}{
     \poswithprd{Course Project: Pager}{March 2019}
+    Implemented a memory pager based on a vritual MMU with only read\_enable and write\_enable bits.
+
     \begin{miniItemize}
-        \item
-        Led a group of 2 members. Implemented a memory pager based on a vritual MMU with only read\_enable and write\_enable flags.
-        \item
-        Maintain the state of physical pages by triggering page faults. Implement clock algorithm. Support fork and copy-on-write. Minimize disk I/O and page copy to improve performance.
-        \item
-        Adopt an object-oriented strategy. Enforce encapsulation to increase maintainability.
+        \item Maintained the state of physical pages by triggering page faults. Emulated accessed bit and dirty bit. Used clock algorithm to decide the page to evict.
+        \item Supported fork and copy-on-write. Minimized disk I/O and page copy to improve performance.
+        \item Adopted an object-oriented approach. Designed classes for the memory, the swap space, physical pages, and processes. Encapsulated all states variables to increase maintainability.
     \end{miniItemize}
 }
 \newcommand{\ThreadLib}{
