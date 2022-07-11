@@ -1,6 +1,6 @@
 BUILD ?= latexmk -pdf -file-line-error -interaction=nonstopmode -synctex=1
 
-.DEFAULT_GOAL := Resume
+.DEFAULT_GOAL := resume
 
 %:: %.tex
 	$(BUILD) $<

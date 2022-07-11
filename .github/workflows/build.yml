@@ -18,7 +18,7 @@ jobs:
       - name: Compile
         uses: xu-cheng/latex-action@v2
         with:
-          root_file: Resume*.tex
+          root_file: resume*.tex
           glob_root_file: true
       - name: Upload
         uses: actions/upload-artifact@v2
