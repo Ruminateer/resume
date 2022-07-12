@@ -8,6 +8,8 @@
 \pagestyle{empty}           % No page numbers/headers/footers
 
 \RequirePackage[hidelinks]{hyperref}
+\RequirePackage[en-US]{datetime2}
+\DTMlangsetup*{abbr, showdayofmonth=false}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Spacing
 \RequirePackage[scale = 0.9]{geometry}
@@ -55,6 +57,14 @@
     \begin{itemize}
 }{
     \end{itemize}
+    \end{minipage}
+
+}
+
+\newcommand*{\experience}[5]{
+    \emph{#1, #2}\hfill\DTMDate{#3} -- \DTMDate{#4}
+    \begin{minipage}[t]{\itemwidth}
+        #5
     \end{minipage}
 
 }
