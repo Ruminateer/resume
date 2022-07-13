@@ -41,23 +41,9 @@
 \newcommand*{\name}[1]{{\Huge\textbf{\uppercase{#1}}}}
 \newcommand*{\orgnization}[1]{{\large\textbf{#1}}}
 \newcommand*{\location}[1]{\textbf{#1}}
-\newcommand*{\position}[1]{\emph{#1}}
-\newcommand*{\period}[1]{#1}
 
 \newcommand*{\orgwithloc}[2]{
     \orgnization{#1}\hfill\location{#2}
-
-}
-\newcommand*{\poswithprd}[2]{
-    \position{#1}\hfill\period{#2}
-
-}
-\newenvironment*{miniItemize}{
-    \begin{minipage}[t]{\itemwidth}
-    \begin{itemize}
-}{
-    \end{itemize}
-    \end{minipage}
 
 }
 
