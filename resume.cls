@@ -15,11 +15,6 @@
 \RequirePackage[scale = 0.9]{geometry}
 
 % vertical
-\newcommand*{\NewPart}[1]{
-    \vspace{-3ex}
-    \section*{\sectiontitle{#1}}
-    \vspace{-1.5ex}
-}
 \RequirePackage{enumitem}
 \setlist{noitemsep, nosep, after=\vspace{1.3ex}}
 
@@ -31,10 +26,13 @@
 \newcommand*{\skillwidth}{\textwidth - \bltPrdWidth - 8.1em}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Sections
-\RequirePackage{sectsty}
-\sectionfont{\sectionrule{0pt}{0pt}{-4pt}{1.5pt}}
-\newcommand*{\sectiontitle}[1]{\textbf{\uppercase{#1}}}
+\RequirePackage{titlesec}
+\titleformat{\section}
+    {\Large\bfseries\uppercase}
+    {}{}
+    {\vspace*{-2ex}}
+    [\vspace*{-2ex}\rule{\textwidth}{1.5pt}\vspace*{-2ex}]
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Entries
