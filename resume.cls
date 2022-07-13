@@ -48,7 +48,7 @@
 }
 
 \newcommand*{\experience}[5]{
-    \emph{#1, #2}\hfill\DTMDate{#3} -- \DTMDate{#4}
+    \emph{#1\ifblank{#2}{}{, #2}}\hfill\DTMDate{#3} -- \DTMDate{#4}
     \begin{minipage}[t]{\itemwidth}
         #5
     \end{minipage}
