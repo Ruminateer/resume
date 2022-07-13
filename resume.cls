@@ -46,7 +46,9 @@
 }
 
 \newcommand*{\experience}[5]{
-    \emph{#1\ifblank{#2}{}{, #2}}\hfill\DTMDate{#3} -- \DTMDate{#4}
+    \emph{#1\ifstrempty{#2}{}{, #2}}
+    \hfill
+    \DTMDate{#3} -- \ifstrempty{#4}{Present}{\DTMDate{#4}}
     \begin{minipage}[t]{\itemwidth}
         #5
     \end{minipage}
