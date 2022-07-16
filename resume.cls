@@ -30,16 +30,14 @@
 
 % Commands
 \newcommand*{\name}[1]{{\Huge\bfseries\uppercase{#1}}}
-\newcommand*{\orgnization}[1]{{\large\textbf{#1}}}
-\newcommand*{\location}[1]{\textbf{#1}}
 
-\newcommand*{\orgwithloc}[2]{
-    \orgnization{#1}\hfill\location{#2}
+\newcommand*{\organization}[2]{
+    {\bfseries {\large #1} \hfill #2}
 
 }
 
 \newcommand*{\experience}[5]{
-    \emph{#1\ifstrempty{#2}{}{, #2}}
+    \textit{#1\ifstrempty{#2}{}{, #2}}
     \hfill
     \DTMDate{#3} -- \ifstrempty{#4}{Present}{\DTMDate{#4}}
     \begin{minipage}[t]{\textwidth - \sidbarwidth}
