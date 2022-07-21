@@ -36,7 +36,7 @@
 }
 
 \newcommand*{\experience}[5]{
-    \textit{#1\ifstrempty{#2}{}{, #2}}
+    \textit{#1\ifstrempty{#2}{}{ @ #2}}
     \hfill
     \DTMDate{#3} -- \ifstrempty{#4}{Present}{\DTMDate{#4}}
     \begin{minipage}[t]{\textwidth - \sidbarwidth}
