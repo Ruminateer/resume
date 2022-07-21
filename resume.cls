@@ -2,11 +2,12 @@
 \ProvidesClass{resume}
 
 \LoadClass[11pt]{article}
-\renewcommand{\familydefault}{\sfdefault}
+\renewcommand*{\familydefault}{\sfdefault}
 \pagestyle{empty}
 
 \RequirePackage{fontawesome}
 \RequirePackage[hidelinks]{hyperref}
+\RequirePackage{bookmark}
 \RequirePackage[en-US]{datetime2}
 \DTMlangsetup*{abbr, showdayofmonth=false}
 
@@ -29,8 +30,6 @@
     [\vspace*{-2ex}\rule{\textwidth}{1.5pt}\vspace*{-2ex}]
 
 % Commands
-\newcommand*{\name}[1]{{\Huge\bfseries\uppercase{#1}}}
-
 \newcommand*{\organization}[2]{
     {\bfseries {\large #1} \hfill #2}
 
@@ -45,3 +44,39 @@
     \end{minipage}
 
 }
+
+\newcommand*{\uhref}[2]{
+    \href{#1}{\underline{\smash{#2}}}
+}
+
+% Header
+\makeatletter
+
+\newcommand*{\@newstorage}[1]{
+    \@namedef{#1}##1{\@namedef{@#1}{##1}}
+    \@nameuse{#1}{#1\ClassWarning{resume}{No #1 given}}
+}
+
+\@newstorage{name}
+\@newstorage{phone}
+\@newstorage{email}
+\@newstorage{github}
+\@newstorage{linkedin}
+
+\renewcommand*{\maketitle}{
+    \begin{center}
+        {\Huge\bfseries\MakeUppercase{\@name}}
+        \vspace{1ex}
+
+        {\small
+            \begin{tabular}{l l}
+                \faPhone    \uhref{tel:\@phone}{\@phone} &
+                \faEnvelope \uhref{mailto:\@email}{\@email} \\
+                \faGithub   \uhref{https://github.com/\@github}{\@github} &
+                \faLinkedin \uhref{https://www.linkedin.com/in/\@linkedin}{\@linkedin} \\
+            \end{tabular}
+        }
+    \end{center}
+}
+
+\makeatother
