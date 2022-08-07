@@ -22,7 +22,7 @@
 \setlength\parindent{0em}
 \newcommand*{\sidbarwidth}{9em}
 
-% Section 
+% Section
 \RequirePackage{titlesec}
 \titleformat{\section}
     {\Large\bfseries\uppercase}
