@@ -16,7 +16,8 @@
 \RequirePackage{calc}
 % vertical
 \RequirePackage{enumitem}
-\setlist{noitemsep, nosep, after=\vspace{1.3ex}}
+\setlist{nosep}
+\setlist[1]{after=\vspace*{1ex}}
 % horizontal
 \setlength\parindent{0em}
 \newcommand*{\sidbarwidth}{9em}
