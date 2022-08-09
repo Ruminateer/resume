@@ -17,7 +17,7 @@
 % vertical
 \RequirePackage{enumitem}
 \setlist{nosep}
-\setlist[1]{after=\vspace*{1ex}}
+\setlist[1]{after=\endgraf\vspace*{1ex}}
 % horizontal
 \setlength\parindent{0em}
 \newcommand*{\sidbarwidth}{9em}
