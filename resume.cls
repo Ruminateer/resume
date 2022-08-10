@@ -1,7 +1,7 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{resume}
 
-\LoadClass[11pt]{article}
+\LoadClassWithOptions{article}
 \renewcommand*{\familydefault}{\sfdefault}
 \pagestyle{empty}
 
@@ -28,7 +28,7 @@
     {\Large\bfseries\uppercase}
     {}{}
     {\vspace*{-2ex}}
-    [\vspace*{-2ex}\rule{\textwidth}{1.5pt}\vspace*{-2ex}]
+    [\vspace*{-2ex}\rule{\columnwidth}{1.5pt}\vspace*{-2ex}]
 
 % Commands
 \newcommand*{\organization}[2]{
@@ -41,7 +41,7 @@
     \hfill
     \DTMDate{#3} -- \ifstrempty{#4}{Present}{\DTMDate{#4}}
 
-    \begin{minipage}[t]{\textwidth - \sidbarwidth}
+    \begin{minipage}[t]{\columnwidth - \sidbarwidth}
         #5
     \end{minipage}
 
