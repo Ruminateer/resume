@@ -16,12 +16,13 @@
 \RequirePackage{calc}
 % vertical
 \RequirePackage{enumitem}
-\setlist{noitemsep, nosep, after=\vspace{1.3ex}}
+\setlist{nosep}
+\setlist[1]{after=\endgraf\vspace*{1ex}}
 % horizontal
 \setlength\parindent{0em}
 \newcommand*{\sidbarwidth}{9em}
 
-% Section 
+% Section
 \RequirePackage{titlesec}
 \titleformat{\section}
     {\Large\bfseries\uppercase}
@@ -36,9 +37,10 @@
 }
 
 \newcommand*{\experience}[5]{
-    \textit{#1\ifstrempty{#2}{}{, #2}}
+    \textit{#1\ifstrempty{#2}{}{ @ #2}}
     \hfill
     \DTMDate{#3} -- \ifstrempty{#4}{Present}{\DTMDate{#4}}
+
     \begin{minipage}[t]{\textwidth - \sidbarwidth}
         #5
     \end{minipage}
