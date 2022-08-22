@@ -19,11 +19,20 @@ jobs:
           glob_root_file: true
 
       - name: Upload
-        if: github.ref_type == 'branch'
         uses: actions/upload-artifact@v3
         with:
           name: resume
-          path: resume.pdf
+          path: resume*.pdf
+
+  release:
+    needs: build
+    if: github.ref_type == 'tag'
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/download-artifact@v3
+        with:
+          name: resume
 
       - name: Get Time
         uses: josStorer/get-current-time@v2
@@ -32,9 +41,7 @@ jobs:
           format: MMMM YYYY
 
       - name: Release
-        if: github.ref_type == 'tag'
         uses: softprops/action-gh-release@v1
         with:
           files: resume.pdf
           body: My resume as of ${{ steps.time.outputs.formattedTime }}.
-          generate_release_notes: true
