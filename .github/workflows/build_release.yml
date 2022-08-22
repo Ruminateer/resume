@@ -45,4 +45,3 @@ jobs:
         with:
           files: resume.pdf
           body: My resume as of ${{ steps.time.outputs.formattedTime }}.
-          generate_release_notes: true
