@@ -19,7 +19,6 @@ jobs:
           glob_root_file: true
 
       - name: Upload
-        if: github.ref_type == 'branch'
         uses: actions/upload-artifact@v3
         with:
           name: resume
