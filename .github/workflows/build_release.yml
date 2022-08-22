@@ -25,6 +25,7 @@ jobs:
           path: resume*.pdf
 
   release:
+    needs: build
     if: github.ref_type == 'tag'
     runs-on: ubuntu-latest
 
