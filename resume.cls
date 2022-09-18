@@ -52,8 +52,6 @@
 }
 
 % Header
-\makeatletter
-
 \newcommand*{\@newstorage}[1]{
     \@namedef{#1}##1{\@namedef{@#1}{##1}}
     \@nameuse{#1}{#1\ClassWarning{resume}{No #1 given}}
@@ -80,5 +78,3 @@
         }
     \end{center}
 }
-
-\makeatother
