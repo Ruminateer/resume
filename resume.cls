@@ -36,13 +36,17 @@
 
 }
 
-\newcommand*{\experience}[5]{
-    \textit{#1\ifstrempty{#2}{}{ @ #2}}
+\newcommand*{\degree}[3]{
+    #1 in #2, #3
+}
+
+\newcommand*{\experience}[4]{
+    \textit{#1}
     \hfill
-    \DTMDate{#3} -- \ifstrempty{#4}{Present}{\DTMDate{#4}}
+    \DTMDate{#2} -- \ifstrempty{#3}{Present}{\DTMDate{#3}}
 
     \begin{minipage}[t]{\columnwidth - \sidbarwidth}
-        #5
+        #4
     \end{minipage}
 
 }
