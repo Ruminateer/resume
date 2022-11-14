@@ -54,6 +54,7 @@ jobs:
 
   deploy:
     needs: build
+    if: github.ref_type == 'tag'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
