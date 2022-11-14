@@ -4,21 +4,26 @@ on:
   push:
   workflow_dispatch:
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
+      - name: Checkout Repo
         uses: actions/checkout@v3
 
-      - name: Compile
+      - name: Compile PDF
         uses: xu-cheng/latex-action@v2
         with:
           root_file: resume*.tex
           glob_root_file: true
 
-      - name: Upload
+      - name: Upload Artifact
         uses: actions/upload-artifact@v3
         with:
           name: resume
@@ -30,7 +35,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/download-artifact@v3
+      - name: Download Artifact
+        uses: actions/download-artifact@v3
         with:
           name: resume
 
@@ -40,8 +46,39 @@ jobs:
         with:
           format: MMMM YYYY
 
-      - name: Release
+      - name: Create Release
         uses: softprops/action-gh-release@v1
         with:
           files: resume.pdf
           body: My resume as of ${{ steps.time.outputs.formattedTime }}.
+
+  deploy:
+    needs: build
+    if: github.ref_type == 'tag'
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Download Artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: resume
+
+      - name: Checkout README
+        uses: Bhacaz/checkout-files@v2
+        with:
+          files: README.md
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v2
+
+      - name: Upload Pages Artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: .
+
+      - name: Deploy Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
