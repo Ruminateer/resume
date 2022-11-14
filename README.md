@@ -1,2 +1,4 @@
-# Resume
-This is the resume of Zhengyuan Zhang. For a compiled PDF, check out the [latest release](https://github.com/Ruminateer/Resume/releases/latest).
+# Resume of Zhengyuan Zhang
+This is the resume of Zhengyuan Zhang.
+
+A compiled PDF is avaliable at <https://ruminateer.github.io/resume/resume.pdf>.
