@@ -3,9 +3,9 @@
 Developed observability and monitoring tools for the AI model storage team.
 \begin{itemize}
     \item Developed a logging context library in C++ and Python.
-    Designed an abstract class to provide a general logging interface.
+    Designed a general logging context interface.
     Allowed users to create and modify subcontexts without affecting parent contexts.
-    Developed a subclass to log AI model storage related events to \href{https://research.facebook.com/publications/scuba-diving-into-data-at-facebook/}{Scuba}.
+    Implemented the interface to log AI model storage related events to \href{https://research.facebook.com/publications/scuba-diving-into-data-at-facebook/}{Scuba}.
     \item Migrated PyPer and Caffe2 checkpointing code from a singleton logger to the logging context.
     The logging context library is more robust, allows multithreading, and gives more C++ support.
     \item Developed a Cubism Dashboard to monitor checkpointing related statistics across all regions.
