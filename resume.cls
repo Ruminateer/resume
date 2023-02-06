@@ -69,7 +69,7 @@
 
 \renewcommand*{\maketitle}{
     \begin{center}
-        {\Huge\bfseries\MakeUppercase{\@name}}
+        {\Huge\bfseries\@name}
         \vspace{1ex}
 
         {\small
