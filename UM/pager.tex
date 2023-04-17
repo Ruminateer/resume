@@ -1,0 +1,16 @@
+\experience{Course Project: Pager}{2019-2-0}{2019-3-0}{
+    Implemented a memory pager based on a virtual MMU with only read\_enable and write\_enable bits.
+    \begin{itemize}
+        \item
+              Maintained the state of physical pages by triggering page faults.
+              Emulated accessed bit and dirty bit.
+              Used clock algorithm to decide the page to evict.
+        \item
+              Supported fork and copy-on-write.
+              Minimized disk I/O and page copy to improve performance.
+        \item
+              Adopted an object-oriented approach.
+              Designed classes for the memory, the swap space, physical pages, and processes.
+              Encapsulated all state variables to increase maintainability.
+    \end{itemize}
+}
