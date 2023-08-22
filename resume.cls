@@ -27,8 +27,8 @@
 \titleformat{\section}
     {\Large\bfseries\uppercase}
     {}{}
-    {\vspace*{-2ex}}
-    [\vspace*{-2ex}\rule{\columnwidth}{1.5pt}\vspace*{-2ex}]
+    {\vspace*{-1ex}}
+    [\vspace*{-2ex}\rule{\columnwidth}{1pt}\vspace*{-2ex}]
 
 % Commands
 \newcommand*{\organization}[2]{
