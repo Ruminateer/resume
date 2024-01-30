@@ -1,11 +1,14 @@
+\newcommand*{\Paddle}{\href{https://www.paddlepaddle.org.cn/en}{PaddlePaddle}}
+\newcommand*{\KServe}{\href{https://github.com/kserve/kserve}{KServe}}
+
 \organization{\href{https://ir.baidu.com/}{Baidu}}{Shanghai, China}
 \experience{Software Engineer}{2020-12-16}{2021-6-4}{
-Developed various components for running \href{https://www.paddlepaddle.org.cn/en}{PaddlePaddle} workflows on Kubernetes.
+Developed components for running \Paddle{} on Kubernetes.
 \begin{itemize}
     \item
-    Used \href{https://github.com/kserve/kserve}{KServe} Python SDK and Paddle inference to develop Paddle Server, an HTTP server that serves Paddle models.
-    Added Paddle predictor to \href{https://github.com/kserve/kserve}{KServe}, allowing users to set up Paddle inference service on Kubernetes by simply providing the location of Paddle models.
+    Integrated \Paddle{} into \KServe{}, allowing users to serve Paddle models on Kubernetes.
+    Implemented a Paddle inference server using \KServe{} Python SDK.
+    Defined Paddle inference services as a Kubernetes CRD object and implemented its Kubernetes controller.
     \item Developed \href{https://github.com/PaddleFlow/paddle-operator}{Paddle Operator}, allowing users to train Paddle models on Kubernetes.
-    Upgraded the operator from Kubernetes 1.8 to 1.20. Migrated the project from Go Dep to Go Modules.
 \end{itemize}
 }
