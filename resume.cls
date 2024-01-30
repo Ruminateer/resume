@@ -45,10 +45,12 @@
     \hfill
     \DTMDate{#2} -- \ifstrempty{#3}{Present}{\DTMDate{#3}}
 
+    \ifstrempty{#4}{}{
     \begin{minipage}[t]{\columnwidth - \sidbarwidth}
         #4
     \end{minipage}
 
+    }
 }
 
 \newcommand*{\uhref}[2]{
