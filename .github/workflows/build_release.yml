@@ -70,7 +70,7 @@ jobs:
         run: echo '<meta http-equiv="refresh" content="0; url=https://ruminateer.github.io/resume/resume.pdf" />' > index.html
 
       - name: Upload Pages Artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           path: .
 
