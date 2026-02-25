@@ -64,7 +64,7 @@ jobs:
           name: resume
 
       - name: Setup Pages
-        uses: actions/configure-pages@v4
+        uses: actions/configure-pages@v5
 
       - name: Create Index
         run: echo '<meta http-equiv="refresh" content="0; url=https://ruminateer.github.io/resume/resume.pdf" />' > index.html
