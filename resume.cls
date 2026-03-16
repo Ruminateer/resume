@@ -25,10 +25,10 @@
 % Section
 \RequirePackage{titlesec}
 \titleformat{\section}
-    {\Large\bfseries\uppercase}
-    {}{}
-    {\vspace*{-1ex}}
-    [\vspace*{-2ex}\rule{\columnwidth}{1pt}\vspace*{-2ex}]
+{\Large\bfseries\uppercase}
+{}{}
+{\vspace*{-1ex}}
+[\vspace*{-2ex}\rule{\columnwidth}{1pt}\vspace*{-2ex}]
 
 % Commands
 \newcommand*{\organization}[2]{
@@ -46,9 +46,9 @@
     \DTMDate{#2} -- \ifstrempty{#3}{Present}{\DTMDate{#3}}
 
     \ifstrempty{#4}{}{
-    \begin{minipage}[t]{\columnwidth - \sidbarwidth}
-        #4
-    \end{minipage}
+        \begin{minipage}[t]{\columnwidth - \sidbarwidth}
+            #4
+        \end{minipage}
 
     }
 }
