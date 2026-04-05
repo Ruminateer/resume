@@ -1,20 +1,19 @@
 \organization{Meta}{Menlo Park, CA}
 \experience{Production Engineer}{2023-12-4}{}{
-    Developed tools to enhance the user experience of the AI Inference Platform.
+    Built capacity management and model serving infrastructure for Meta's AI Inference Platform.
     \begin{itemize}
-        \item Migrating GenAI models onto inference experience service, enabling UI integration and quick experiments.
+        \item Designed and built automated pre-scaling for large traffic experiments, estimating capacity needs and scaling models ahead of traffic shifts. Served 300+ quick experiments for Instagram and \href{https://en.wikipedia.org/wiki/Meta_Superintelligence_Labs}{MSL}. Extended to support pre-scaling in continuous capacity planning mode.
+        \item Built launch capacity estimation and observability tooling. Implemented buffer calculation, efficiency metrics, a debugging UI, and prepare-step estimation to surface deficits before launch. Built capacity estimation for distributed inference models. Unblocked 70+ launches as oncall and drove follow-ups. Drove launch self-serve rate from 30\textendash 40\% to 60\textendash 70\%.
+        \item Extended the capacity solver to support server groups and host profiles, enabling gang scheduling, distributed inference paradigms, and trusted execution environments.
+        \item Migrated all inference platform configs to a config-as-code system. Co-designed and built automated config generation tooling to reduce config boilerplate.
+        \item Designed and built tooling to bridge physical capacity and virtual quota. Built a capacity-to-quota syncer and shared pool accounting tools to track resource ownership and automatically allocate quota from capacity transfers, eliminating manual quota assignment.
     \end{itemize}
 }
 
 \experience{Production Engineer Intern}{2022-5-23}{2022-8-12}{
     Developed observability and monitoring tools for the AI model storage team.
     \begin{itemize}
-        \item Developed a logging context library in C++ and Python.
-            Designed a general logging context interface.
-            Allowed users to create and modify subcontexts without affecting parent contexts.
-            Implemented the interface to log machine learning checkpointing events to \href{https://research.facebook.com/publications/scuba-diving-into-data-at-facebook/}{Scuba} and ODS.
-        \item Migrated PyPer and Caffe2 checkpointing code from a singleton logger to the logging context.
-            The migration separated logging logic from checkpointing logic and reduced incorrect logging.
-        \item Developed a Cubism Dashboard to monitor checkpointing related statistics across all regions.
+        \item Developed a structured logging library in C++ and Python. Migrated checkpointing code from a singleton logger, decoupling logging from business logic and improving log correctness.
+        \item Built a Cubism monitoring dashboard tracking checkpointing statistics.
     \end{itemize}
 }
