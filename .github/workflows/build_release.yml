@@ -21,6 +21,7 @@ jobs:
         uses: actions/upload-artifact@v7
         with:
           path: resume.pdf
+          archive: false
 
   release:
     needs: build
