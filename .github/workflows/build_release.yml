@@ -15,13 +15,13 @@ jobs:
       - name: Compile PDF
         uses: xu-cheng/latex-action@v4
         with:
-          root_file: resume*.tex
+          root_file: resume.tex
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v7
         with:
           name: resume
-          path: resume*.pdf
+          path: resume.pdf
 
   release:
     needs: build
