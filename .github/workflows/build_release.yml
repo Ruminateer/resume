@@ -39,7 +39,7 @@ jobs:
           format: MMMM YYYY
 
       - name: Create Release
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v3
         with:
           files: resume.pdf
           body: My resume as of ${{ steps.time.outputs.formattedTime }}.
